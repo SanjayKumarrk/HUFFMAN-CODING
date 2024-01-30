@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="_/css/style.css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Huffman Coding</h1>
+      </header>
+      <!-- Encoder -->
+      <main class="container">
+        <div class="box enCoder">
+          <h2>Encoder</h2>
+          <textarea
+            type="text"
+            id="enCoder"
+            placeholder="type text here e.g 'Mississippi river'"
+            autofocus
+          ></textarea>
+          <table>
+            <tbody>
+              <tr>
+                <th>Character</th>
+                <th>Frequency</th>
+                <th>%</th>
+                <th>Code</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Decoder -->
+        <div class="box">
+          <div class="deCoder">
+            <h2>Decoder</h2>
+            <textarea
+              disabled
+              type="text"
+              id="deCoder"
+              placeholder="insert the code [takes binary character 0 or 1]"
+            ></textarea>
+            <div id="result"></div>
+          </div>
+          <!-- Graph -->
+          <div class="graph">
+            <h2>Graph</h2>
+          </div>
+        </div>
+      </main>
+      <section class="communication__container">
+        <h2>Data communication demo</h2>
+        <div class="comm__wrap">
+          <div class="transmitter">
+            <p class="sub__head">Transmitter</p>
+            <div class="tx__details"></div>
+            <div class="tx__input--container">
+              <textarea
+                name="tx"
+                id="tx__input"
+                placeholder="Enter text to transmitt"
+              ></textarea>
+              <button class="btn send" disabled>Transmit</button>
+            </div>
+          </div>
+          <div class="receiver">
+            <p class="sub__head">Receiver</p>
+            <div class="rx__details">
+              <!-- <div class="rx__message--box">
+                <p class="rx__text">code-received:1100011000</p>
+                <p class="rx__text">decoded-message:engineering</p>
+                <button class="btn getTree">Show received tree</button>
+              </div> -->
+            </div>
+            <button class="btn getTree" disabled>Show received tree</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="_/js/d3js.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
